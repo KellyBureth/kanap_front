@@ -88,7 +88,8 @@ function calculateAndDisplayTotalPrice() {
   const asyncForPrice = productInLocalStorage.map(async (elt) => {
     const productID = elt.id;
     const apiPrice = await fetch(
-      "https://kanap-back.netlify.app/api/products/" + productID
+      "https://http-nodejs-production-010c.up.railway.app/api/products/" +
+        productID
     ).then((res) => res.json()); //RETRIEVE PRODUCT ID
     const productPrice = await apiPrice.price; //RETRIEVE THE PRICE OF PRODUCT ID
     const pricePerKanap = productPrice * elt.quantity; //MULTIPLY PRICE*QUANTITY FOR EACH PROCDUCT
