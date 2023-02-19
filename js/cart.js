@@ -145,7 +145,7 @@ if (productInLocalStorage) {
     }
 
     /*________RETRIEVES PRODUCT INFO FROM API AND DISPLAYS IT________*/
-    fetch("https://kanap-back.netlify.app/api/products/")
+    fetch("https://kanapback-production.up.railway.app/api/products/")
       .then((res) => res.json())
       .then((data) => {
         for (let i of data) {
@@ -484,7 +484,7 @@ btnOrder.addEventListener("click", function (e) {
 
     /*________POST THE CONTACT OBJECT AND THE PRODUCTS ARRAY TO THE API________*/
     const postContactAndProduct = fetch(
-      "https://kanap-back.netlify.app/api/products/order",
+      "https://kanapback-production.up.railway.app/api/products/order",
       {
         method: "POST",
         headers: { "Content-type": "application/json" },
