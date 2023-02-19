@@ -6,7 +6,7 @@ fetch("https://kanapback-production.up.railway.app/api/products") //RETRIEVES PR
       //FOR EACH PRODUCT OF THE API
       /*________THE LINK________*/
       let a = document.createElement("a");
-      a.href = "./product.html?id=" + i._id; //REDIRECTS TO THE PRODUCT PAGE WITH THE ID
+      a.href = "./html/product.html?id=" + i._id; //REDIRECTS TO THE PRODUCT PAGE WITH THE ID
       section.appendChild(a);
 
       /*________THE IMAGE________*/
