@@ -1,4 +1,4 @@
-fetch("http-nodejs-production-010c.up.railway.app/api/products") //RETRIEVES PRODUCT INFO FROM API AND DISPLAYS IT
+fetch("https://kanap-api-production.up.railway.app/api/products") //RETRIEVES PRODUCT INFO FROM API AND DISPLAYS IT
   .then((res) => res.json())
   .then((data) => {
     const section = document.getElementById("items"); //WHERE TO PLACE THE CARDS
