@@ -5,7 +5,8 @@ const queryString_url_id = window.location.search;
 const id = queryString_url_id.slice(4);
 
 /*________RETRIEVES PRODUCT INFO FROM API AND DISPLAYS IT________*/
-fetch("https://kanapback-production.up.railway.app/api/products/" + id)
+// fetch("https://kanapback-production.up.railway.app/api/products/" + id)
+fetch("https://kanap.adaptable.app/api/products/" + id)
   .then((res) => res.json())
   .then((data) => {
     image.src = data.imageUrl;

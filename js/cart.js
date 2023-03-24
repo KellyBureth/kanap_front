@@ -88,7 +88,8 @@ function calculateAndDisplayTotalPrice() {
   const asyncForPrice = productInLocalStorage.map(async (elt) => {
     const productID = elt.id;
     const apiPrice = await fetch(
-      "https://kanapback-production.up.railway.app/api/products/" + productID
+      // "https://kanapback-production.up.railway.app/api/products/" + productID
+      "https://kanap.adaptable.app/api/products/" + productID
     ).then((res) => res.json()); //RETRIEVE PRODUCT ID
     const productPrice = await apiPrice.price; //RETRIEVE THE PRICE OF PRODUCT ID
     const pricePerKanap = productPrice * elt.quantity; //MULTIPLY PRICE*QUANTITY FOR EACH PROCDUCT
@@ -145,7 +146,8 @@ if (productInLocalStorage) {
     }
 
     /*________RETRIEVES PRODUCT INFO FROM API AND DISPLAYS IT________*/
-    fetch("https://kanapback-production.up.railway.app/api/products/")
+    // fetch("https://kanapback-production.up.railway.app/api/products/")
+    fetch("https://kanap.adaptable.app/api/products/")
       .then((res) => res.json())
       .then((data) => {
         for (let i of data) {
@@ -484,7 +486,8 @@ btnOrder.addEventListener("click", function (e) {
 
     /*________POST THE CONTACT OBJECT AND THE PRODUCTS ARRAY TO THE API________*/
     const postContactAndProduct = fetch(
-      "https://kanapback-production.up.railway.app/api/products/order",
+      // "https://kanapback-production.up.railway.app/api/products/order",
+      "https://kanap.adaptable.app/api/products/order",
       {
         method: "POST",
         headers: { "Content-type": "application/json" },
